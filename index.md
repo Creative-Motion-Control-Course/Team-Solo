@@ -11,9 +11,9 @@ title: Home
 
 <div style="text-align: center; max-width: 200px;">
   <img src="assets/member1.jpg" alt="Member 1 photo" width="150" style="border-radius: 50%;">
-  <h3>First Last</h3>
+  <h3>Sabina Hyoju Ahnt</h3>
   <p><em>Team 1</em></p>
-  <p>A short bio — background, interests, what you're excited to explore in this course.</p>
+  <p>Artist and researcher working with sound, biological systems, and computational media. This site documents motion control experiments, prototyping, and project development for the course.</p>
 </div>
 
 <div style="text-align: center; max-width: 200px;">
@@ -31,7 +31,7 @@ title: Home
 
 | Project | Description |
 |---------|-------------|
-| [Project 1](projects/project1/docs/) | *Brief description of project 1* |
+| [Project 1](projects/project1/docs/) | Plotter motion tests using stepper motors and physical drawing experiments. |
 
 <!-- Add rows as you complete more projects:
 | [Project 2](projects/project2/docs/) | *Brief description of project 2* |
