@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# [Team Name] — Creative Motion Control Course Site
+# [Team-Project] — Creative Motion Control Course Site
 
 ## Team Members
 
