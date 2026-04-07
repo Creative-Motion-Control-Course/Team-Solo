@@ -31,7 +31,8 @@ title: Home
 
 | Project | Description |
 |---------|-------------|
-| [Project 1](projects/project1/docs/) | Modular motion synthesizer |
+| [Project 1 Proposal](projects/project1_Proposal/docs/) | Modular motion Plotter |
+| [Project 1](projects/project1/docs/) | Modular motion Plotter |
 
 <!-- Add rows as you complete more projects:
 | [Project 2](projects/project2/docs/) | *Brief description of project 2* |
