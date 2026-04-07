@@ -11,7 +11,9 @@ title: "Project 1"
 This project is inspired by the fact that Stepdance itself was developed from ideas rooted in modular synthesis.
 Building on this connection, the project proposes a system that extends this relationship: instead of using modular synthesis to generate sound, it uses modular signals to generate motion.
 The plotter translates electrical signals from a modular system into movement, treating control voltage as a source of motion energy rather than sound. Inspired by modular patching, the same signal can take on different roles—such as oscillation, modulation, or accumulation—depending on how it is used within the system.
-Rather than visualizing sound directly, the project focuses on how signal structures can shape behavior, resulting in drawings that evolve through oscillation, variation, and repetition
+Rather than visualizing sound directly, the project focuses on how signal structures can shape behavior, resulting in drawings that evolve through oscillation, variation, and repetition.
+
+![Modular synthesis photo](https://cdn.shopify.com/s/files/1/1793/8985/files/Modular-synth-wavetable-waveform_600x600.jpg?v=1674725110)
 
 ## Core Idea
 **One signal, multiple behaviors**
@@ -19,23 +21,31 @@ Rather than visualizing sound directly, the project focuses on how signal struct
 - A single input signal (LFO or CV) is used
 - The system reinterprets this signal in different ways
 - Each interpretation produces a different drawing style
-“Sound has 4 properties, pitch, loudness, timbre and duration, and silence has one – duration.” For motion in plotters, similar happens on pen up (sound) and pen down. For the motion control of plotter on paper, the properties that matter are either
 
-1. The starting point, end point, length of the path, and the shape of the path. 
-2. The starting point, the duration, the direction of movement at particular time of duration, the speed of the movement at particular time of the duration
+“Sound has 4 properties, pitch, loudness, timbre and duration, and silence has one – duration.” For plotters, this is similar on pen down (for sound) and pen up (for silence). When the pen is down, the properties of motion includes:
+- The starting point
+- The duration
+- The direction of movement at particular time of duration
+- The speed of the movement at particular time of the duration
 
-The difference lies in whether we focus on delivering the final outcome on the paper, which makes a paint stroke a state invariant shape, or focus on the painting process of the plotter, make it more like a machine performance and have the paper painting only as a side profile of the process.
+Here we focus on the painting process of the plotter, which is more similar to a machine performance. The paper painting result is a side profile of the performance process.
 
 ## System Structure
-Modular CV (LFO) 
-        ↓
-Voltage scaling (safe range)
-        ↓
-Stepdance (Teensy input A1)
-        ↓
-Motion mapping (code)
-        ↓
-Plotter drawing
+<div style="display:flex; flex-direction:column; align-items:center; gap:10px; font-family:sans-serif;">
+  <div class="box">Modular CV (LFO)</div>
+  <div>↓</div>
+
+  <div class="box">Voltage scaling (safe range)</div>
+  <div>↓</div>
+
+  <div class="box">Stepdance (Teensy input A1)</div>
+  <div>↓</div>
+
+  <div class="box">Motion mapping (code)</div>
+  <div>↓</div>
+
+  <div class="box">Plotter drawing</div>
+</div>
 
 
 ## Design
@@ -43,8 +53,34 @@ Plotter drawing
 Explain your design process. What choices did you make and why?
 
 ## Implementation
+### **1. Inputs**
 
-Describe how you implemented your project using the StepDance library.
+- Primary Input: Modular LFO (connected to A1)User control:
+- Potentiometer → controls intensity (amplitude)
+- Button → switches behavior modes
+
+### **2. Signal Mapping**
+
+The same input signal is reused in different ways depending on mode:
+
+
+### Mode 1 — Oscillation
+<p>Signal controls vertical movement and produces smooth wave-like lines.</p>
+<p><strong>y = sin(t) × signal</strong></p>
+
+![oscillation photo](https://cdn.shopify.com/s/files/1/0572/6987/8945/files/oscilliation_480x480.png?v=1655824738)
+
+### Mode 2 — Distortion
+<p>Signal introduces irregular variation and produces unstable, noisy lines.</p>
+<p><strong>y = sin(t) + signal × noise</strong></p>
+
+![distortion photo](https://sound-au.com/articles/distortion-f212.gif)
+
+### Mode 3 — Iterative Drift
+<p>Signal accumulates over time and produces gradually shifting structures.</p>
+<p><strong>state = state + signal × small_factor</strong></p>
+<p><strong>y = state</strong></p>
+
 
 ### Hardware Setup
 
