@@ -127,3 +127,17 @@ Show your project in action. Embed a video of it working:
 ## Reflection
 
 What did you learn? What would you do differently?
+
+
+
+
+# Steps
+0. translate and figure out code
+
+1. Circular momvement base
+
+2. Z axis
+
+3. Manual stop start / limiter
+
+4. Replace synthesizer within the Arduino IDE

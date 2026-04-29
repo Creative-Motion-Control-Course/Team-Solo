@@ -19,7 +19,7 @@ title: Home
 <div style="text-align: center; max-width: 200px;">
   <img src="assets/member2.jpg" alt="Member 2 photo" width="150" style="border-radius: 50%;">
   <h3>Felix Yuan</h3>
-  <p><em>M.S./PhD Media Arts & Technology, UCSB</em></p>
+  <p><em>M.S./PhD, MAT, UCSB</em></p>
   <p>Artist and developer interested in how artwork push the boundary of human perception and corporality. Thinking and excited about exploring machinary corporality in this course.</p>
 </div>
 
