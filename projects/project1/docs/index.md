@@ -1,17 +1,17 @@
 ---
 layout: default
-title: "Project 1"
+title: "Project 1 Proposal"
 ---
 
-# Project 1 Proposal: Modular Signal Plotter
+# Project 1: Modular Signal Plotter
 
 
 ## Concept
 
-This project is inspired by the fact that Stepdance itself was developed from ideas rooted in modular synthesis and it is a procedual machine.
+This project is inspired by the fact that Stepdance itself was developed from ideas rooted in modular synthesis.
 Building on this connection, the project proposes a system that extends this relationship: instead of using modular synthesis to generate sound, it uses modular signals to generate motion.
 The plotter translates electrical signals from a modular system into movement, treating control voltage as a source of motion energy rather than sound. Inspired by modular patching, the same signal can take on different roles—such as oscillation, modulation, or accumulation—depending on how it is used within the system.
-Rather than visualizing sound directly, the project focuses on how signal structures can shape behavior, resulting in drawings that evolve through oscillation, variation, and repetition.
+Rather than visualizing sound directly, the project focuses on how signal structures can shape behavior, resulting in drawings that evolve through oscillation, variation, and repetition
 
 ## Core Idea
 **One signal, multiple behaviors**
@@ -20,26 +20,16 @@ Rather than visualizing sound directly, the project focuses on how signal struct
 - The system reinterprets this signal in different ways
 - Each interpretation produces a different drawing style
 
-**Transforming sound properties into motion properties**
 
-“Sound has 4 properties, pitch, loudness, timbre and duration, and silence has one – duration.” For plotters, this is similar on pen down (for sound) and pen up (for silence). When the pen is down, the properties of motion includes:
-- The starting point
-- The duration
-- The direction of movement at particular time of duration
-- The speed of the movement at particular time of the duration
+1. The starting point, end point, length of the path, and the shape of the path. 
+2. The starting point, the duration, the direction of movement at particular time of duration, the speed of the movement at particular time of the duration
 
-Here we focus on the painting process of the plotter, which is more similar to a machine performance. The paper painting result is a side profile of the performance process.
-
-**Procedual motion synthesizer**
-
-Inspired by metasound from unreal engine and the idea of procedural machine, the system is designed to be a procedural motion synthesizer where as the same signal flow through the system, it generates different motion performance. The procedual map is premeditated, but is to be triggered by the user input and thus making a half-realtime performance.
-
-![Metasound photo](assets/share-img-ue5-early-access-livestream-metasounds-1200x630-990cb66b84cf.jpg)
+The difference lies in whether we focus on delivering the final outcome on the paper, which makes a paint stroke a state invariant shape, or focus on the painting process of the plotter, make it more like a machine performance and have the paper painting only as a side profile of the process.
 
 ## System Structure
-
-**One signal mapping structure**
 <div style="display:flex; flex-direction:column; align-items:center; gap:10px; font-family:sans-serif;">
+  <h3>System Structure</h3>
+
   <div class="box">Modular CV (LFO)</div>
   <div>↓</div>
 
@@ -55,18 +45,17 @@ Inspired by metasound from unreal engine and the idea of procedural machine, the
   <div class="box">Plotter drawing</div>
 </div>
 
+<style>
+.box {
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+</style>
 
-**Performance interface**
 
-The premeditated procedual map can be logged into a device like a DJ pad for the performer to trigger. And there will be another papersized interface for user to determine the starting point of the plotter, which process will be the silent part of the performance.
-
-![Pad picture](https://media.sweetwater.com/m/products/image/3e9704f51eHcFbkvkrDthr6gfIHGdEiFHolVO0Cq.png?ha=3e9704f51e6d41d3b0a064ddf1190a2163de224a&quality=82&width=750)
-
-## Design
-
-Explain your design process. What choices did you make and why?
-
-## Implementation (Plan for now)
+## Implementation
 ### **1. Inputs**
 
 - Primary Input: Modular LFO (connected to A1)User control:
@@ -82,62 +71,59 @@ The same input signal is reused in different ways depending on mode:
 <p>Signal controls vertical movement and produces smooth wave-like lines.</p>
 <p><strong>y = sin(t) × signal</strong></p>
 
-![oscillation photo](https://cdn.shopify.com/s/files/1/0572/6987/8945/files/oscilliation_480x480.png?v=1655824738)
-
 ### Mode 2 — Distortion
 <p>Signal introduces irregular variation and produces unstable, noisy lines.</p>
 <p><strong>y = sin(t) + signal × noise</strong></p>
-
-![distortion photo](https://sound-au.com/articles/distortion-f212.gif)
 
 ### Mode 3 — Iterative Drift
 <p>Signal accumulates over time and produces gradually shifting structures.</p>
 <p><strong>state = state + signal × small_factor</strong></p>
 <p><strong>y = state</strong></p>
 
+### 3. Technical Plan
 
-### Hardware Setup
+* Use Stepdance for motor control
+* Read analog input from A1
+* Normalize input (0–1 range)
+* Map signal to movement parameters: amplitude, distortion, drift
+* Keep implementation simple and stable 
 
-Describe your hardware configuration.
 
-![Hardware setup photo](assets/placeholder.jpg)
-
-### Code Overview
-
-Highlight key parts of your code and explain your approach:
-
-```cpp
-// Paste and explain relevant code snippets here
-```
-
-## Results
-
-Show your project in action. Embed a video of it working:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-
-*Replace the iframe above with your actual video URL, or use a local video:*
-
-<!--
-<video width="560" controls>
-  <source src="assets/demo-video.mp4" type="video/mp4">
-</video>
--->
-
-## Reflection
-
-What did you learn? What would you do differently?
+## Hardware Setup
+* Modular LFO output → attenuated to safe voltage
+* Signal connected to Stepdance A1 input
+* Shared ground between systems 
 
 
 
+## Expected Output
+### 1. Smooth oscillation
+# ~~~~~~~~~~~~~~
 
-# Steps
-0. translate and figure out code
 
-1. Circular momvement base
+### 2. Distorted waveform
+# ~~--~~~---~~~
 
-2. Z axis
 
-3. Manual stop start / limiter
+### 3. Drifting structure
+# ~
+#  ~~
+#   ~~~
 
-4. Replace synthesizer within the Arduino IDE
+
+
+## Design Goals
+### Specificity
+Designed for oscillatory and signal-driven drawings
+Not suitable for precise geometric output
+
+### Variation
+Different behaviors through mode switching
+Continuous variation from signal changes
+
+### Liveness
+Real-time control via modular signal and user input
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yiL8TIoEK8A?si=bw2wV2MGOqTHDAz2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
