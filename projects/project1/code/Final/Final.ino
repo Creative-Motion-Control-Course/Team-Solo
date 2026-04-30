@@ -218,15 +218,15 @@ void draw_step() {
 
   // LFO signal → wave amplitude (how much radius oscillates)
   // LFO rate → wave frequency (how fast radius oscillates)
-  wave_gen.amplitude = constrain((signal + rate * 2.0) * 15.0, 0.0, 20.0);
-  wave_gen.frequency = 1.0 + rate * 20.0;
+  wave_gen.amplitude = constrain((signal + rate * 2.0) * 15.0, 0.0, 20.0); // amplified amplitude
+  wave_gen.frequency = 1.0 + rate * 20.0;// amplified frequency (sensitivity)
 
   // Calculate radius: base_radius + LFO wave modulation
-  float wave_value = wave_gen.amplitude * sin(millis() / 1000.0 * wave_gen.frequency * 2.0 * PI);
-  float radius = base_radius + wave_value;
+  float wave_value = wave_gen.amplitude * sin(millis() / 1000.0 * wave_gen.frequency * 2.0 * PI); //oscillation speed = frequency
+  float radius = base_radius + wave_value; //base_radius + wave_value = final radius
 
   // Advance angle to rotate pen around center
-  angle += 0.05;// → ~126 steps per cycle (2π / 0.05)
+  angle += 0.05;// → ~126 steps per cycle (2π / 0.05) /bigger number -> faster rotation / smaller number -> slow rotation
 
 
   // Detect full cycle completion (every 2*PI radians)
@@ -237,7 +237,7 @@ void draw_step() {
     Serial.println(base_radius);
 
     // Max radius reached → move to next grid position
-    if (base_radius > max_radius) {
+    if (base_radius > max_radius) { // if radius > 40 -> pen up -> next position
       next_position();
       return;
     }
@@ -252,7 +252,7 @@ void draw_step() {
   y = constrain(y, 0.0, paper_height);
 
   // Move plotter to calculated position
-  position_gen_x.go(x, GLOBAL, 20.0);
+  position_gen_x.go(x, GLOBAL, 20.0);//20mm/s pen moving speed
   position_gen_y.go(y, GLOBAL, 20.0);
 }
 
