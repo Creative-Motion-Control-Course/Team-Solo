@@ -17,9 +17,9 @@ Us human has always been fascinated with the idea of zero-gravity or alter-gravi
 
 Some youtubers have been building large scale human sized anti-gravity machines for entertainment purposes.
 
-<iframe width="560" height="315" src="https://youtu.be/gSDtNkKPiDg?si=qJzZDHxxbTCgLuS7" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gSDtNkKPiDg?si=UqF9bS8BArqjSvor" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://youtu.be/GtryF3ltNwE?si=z9W5EbBU-gI3gbxy" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GtryF3ltNwE?si=UTpf470yKJrRjKlH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 And when we look at tools like 3D printers or 3D doodlers, they essentially leave traces of their movement within the 3D space, and the traces stay at its original position without being dragged down by gravity, and create artifacts in dis way. So what would it feel like, to live in this process of creating artifacts that was not dragged down by gravity. 
@@ -30,7 +30,7 @@ This project tend to build and interactive system that, focus on the movement of
 
 For downsizing the user's perception of presence to the scale of a 3D printer head, we'll create a downsized city and create a thrid-person perspective.
 
-<iframe width="560" height="315" src="https://youtu.be/Zel9kF8QJeE?si=rjyIJCg0F-H69Vd9" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zel9kF8QJeE?si=jMyXjqoXeU4lJD0G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Proposed Design
