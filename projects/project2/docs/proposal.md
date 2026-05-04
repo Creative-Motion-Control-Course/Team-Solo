@@ -16,7 +16,9 @@ Us human has always been fascinated with the idea of zero-gravity or alter-gravi
 | Reverted gravity in manga _Bleach_ | NASA Alter-G treadmill for zero-gravity training |
 
 Some youtubers have been building large scale human sized anti-gravity machines for entertainment purposes.
-| <iframe src="https://www.youtube.com/watch?v=gSDtNkKPiDg&t=343s" title="Anti-gravity machine 1"></iframe> | <iframe src="https://www.youtube.com/watch?v=GtryF3ltNwE" title="Anti-gravity machine 2"></iframe> |
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/watch?v=gSDtNkKPiDg&t=343s" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> 
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/watch?v=GtryF3ltNwE" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
 
 And when we look at tools like 3D printers or 3D doodlers, they essentially leave traces of their movement within the 3D space, and the traces stay at its original position without being dragged down by gravity, and create artifacts in dis way. So what would it feel like, to live in this process of creating artifacts that was not dragged down by gravity. 
 
@@ -26,7 +28,7 @@ This project tend to build and interactive system that, focus on the movement of
 
 For downsizing the user's perception of presence to the scale of a 3D printer head, we'll create a downsized city and create a thrid-person perspective.
 
-<iframe src="https://www.youtube.com/watch?v=Zel9kF8QJeE" title="Third person perspective" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/watch?v=Zel9kF8QJeE" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
 
 ## Proposed Design
 
@@ -71,9 +73,3 @@ Example Image
 Example Video Embedding
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/196317031?h=6e5e7b8b2e" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
 <p><a href="https://vimeo.com/196317031">Sample Vimeo Video</a> from <a href="https://vimeo.com/user123456">Vimeo User</a> on <a href="https://vimeo.com">Vimeo</a>.</p> -->
-
-
-
-<!-- <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/watch?v=gSDtNkKPiDg&t=343s" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> 
-
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/watch?v=GtryF3ltNwE" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> -->
