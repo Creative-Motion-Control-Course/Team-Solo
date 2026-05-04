@@ -17,9 +17,9 @@ Us human has always been fascinated with the idea of zero-gravity or alter-gravi
 
 Some youtubers have been building large scale human sized anti-gravity machines for entertainment purposes.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=gSDtNkKPiDg&t=343s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/gSDtNkKPiDg?si=qJzZDHxxbTCgLuS7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=GtryF3ltNwE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/GtryF3ltNwE?si=z9W5EbBU-gI3gbxy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 And when we look at tools like 3D printers or 3D doodlers, they essentially leave traces of their movement within the 3D space, and the traces stay at its original position without being dragged down by gravity, and create artifacts in dis way. So what would it feel like, to live in this process of creating artifacts that was not dragged down by gravity. 
 
@@ -29,7 +29,7 @@ This project tend to build and interactive system that, focus on the movement of
 
 For downsizing the user's perception of presence to the scale of a 3D printer head, we'll create a downsized city and create a thrid-person perspective.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Zel9kF8QJeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/Zel9kF8QJeE?si=rjyIJCg0F-H69Vd9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Proposed Design
 
@@ -39,30 +39,45 @@ The user will be able to control the figure's moving in the space, jump and walk
 
 ## Planned Implementation
 
+
 | ![Example 1](assets/AntiGravity1.png) | ![Example 2](assets/AntiGravity2.png) |
 | :---: | :---: |
 | Example 1 | Example 2 |
 
-IDK how to say dis yet...
+The most important part of the peoject is to recreating a sense of presence for the user during the gravity direction switch process. And then allow the user to move within the corresponding plane under the new gravity direction on the surface of the city model, or to call the environment.
+
+Due to the limit of the 3D printer's arm's collision with the environment, it is difficult to integrate current 3D printer with a multiple layered environment without basically customizing the whole machine. There're certain ways to simplify the process.
+
+One is to limit the environment to one side and limit user's choice of gravity direction to only 4, namely down, up, toward and away from the environment. This can be accmoplished by the design shown below, which demonstrated gravity when toward and away from the environment without the arm fighting the environment.
+| ![Plan 1 example 1](assets/Plan1_1.png) | ![Plan 1 example 2](assets/Plan1_2.png) |
+| :---: | :---: |
+
+The other way is to add a rotating plane within the printing platform. So that the user can land on any side of the environment. This way the all 6 direction of gravity can be supported, and with the third perspective view of the camera, the user are expected to feel the figure switching the environment, instead of the environment rotating.
+![Plan2](assets/Plan2.png)
+If the environment is overall cynlinder, it would provide even more avaliable directions of the gravity.
+
+The most crucial requirement for the installed city model or the environment is that it is generally convex, so that the figure won't need to get in the environment dragging the 3D printer arm behind, avoiding fully customing the machine or using a robotic arm.
+
+The rotation head will have 2 degrees of freedom. One within the plane of the figure, allowing the user to turn 360 degrees and walk around. The other being perpendicular to the plane, used in gravity shifting process. Combining these two DOF with the up/down movement of the printer arm, the forward/backward movement of the printing plane and the rotation of the printing plane if included, will together support user's choice of gravity direction, and the gravity shifting process.
+
+Some more algorithm and menthods are needed for:
+    1. Keeping the figure's feet to the "ground" according to the given gravity direction.
+    2. Pre-mark the environment's position so no sensor is needed for detecting the environment, and also figure out the position of the figure.
+    3. When user is at the boundary of the environment, rotate gravity so the user keep walking on the otherside if the environment.
+    4. When user choose to switch gravity, slowly turn figure around or make space for environment rotation if needed, so it either feels like falling into the sky or jump up and land in a different gravity.
 
 ## Major Challenges / Questions
 
-
 1. Not very sure if this is 100% viable. Seems a little too ambitious for the time and rescources. Is tiny camera gonna fit?
-2. If were to modify the 3D printer, the environment will need to be much less complex, as the arms of the 3D printer will get in the way. Might affect how presence the environment feels.
-3. Mechanism to have the figure's feet always touching, or close to touching the surface of the environment, contingent on the direction of the movement. Rotation and detection might be very complex. Should just use pre-written obstical positions? Also how to design the rotation mechanism.
+2. The machine part of the rotation mechanism.
 ![Figure rotation mechanism](https://www.clownin-around.com/wp-content/uploads/2012/02/SpaceBall-Anti-Gravity-Machine.jpg)
-4. The arm might get in the way so could use a rotating arm support system? But dis way it's bascially a custom machine.
-![Rotating Arms](assets/RotatingArms.png)
 
 ## Materials Required
 
 1. Tiny camera.
 2. 3D printer avaliable for modification.
-3. Alternative 3D printer arm and rotater of the printer head, or materials for making them.
-4. A tiny human-like figure that can be mounted to the head.
-4. Potentially sensors, for slowing down the movement when about to hit the buildings.
-
+3. Rotater of the printer head and arm, or materials for making them.
+4. A tiny human-like figure that can be mounted to the printer head.
 
 <!-- 
 What existing projects (your own or the work of others) inspired you for this idea?
