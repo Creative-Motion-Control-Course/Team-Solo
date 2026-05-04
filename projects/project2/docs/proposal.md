@@ -5,7 +5,7 @@ title: "Project 2 Proposal"
 
 # Project 2 Proposal
 
-## Anti Gravity 3D Printer
+## Anti Gravity 3D Printer Movement
 
 ## Inspiration and Idea
 

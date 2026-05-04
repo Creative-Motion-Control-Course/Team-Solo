@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Project 1"
+title: "Project 2"
 ---
 
-# Project 1: [Your Project Title]
+# Project 2: Anti Gravity 3D Printer Movement
 
 [View the Project Proposal](proposal.md)
 

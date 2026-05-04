@@ -33,8 +33,8 @@ title: Home
 |---------|-------------|
 | [Project 1 Proposal](projects/project1_Proposal/docs/) | Modular motion Plotter |
 | [Project 1](projects/project1/docs/) | Modular motion Plotter |
+| [Project 2](projects/project2/docs/) | Anti-Gravity 3D Printer Movement |
 
 <!-- Add rows as you complete more projects:
-| [Project 2](projects/project2/docs/) | *Brief description of project 2* |
 | [Project 3](projects/project3/docs/) | *Brief description of project 3* |
 -->
