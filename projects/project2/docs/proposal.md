@@ -17,9 +17,9 @@ Us human has always been fascinated with the idea of zero-gravity or alter-gravi
 
 Some youtubers have been building large scale human sized anti-gravity machines for entertainment purposes.
 
-<iframe width="560" height="315" src="https://youtu.be/gSDtNkKPiDg?si=qJzZDHxxbTCgLuS7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://youtu.be/gSDtNkKPiDg?si=qJzZDHxxbTCgLuS7" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
 
-<iframe width="560" height="315" src="https://youtu.be/GtryF3ltNwE?si=z9W5EbBU-gI3gbxy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://youtu.be/GtryF3ltNwE?si=z9W5EbBU-gI3gbxy" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
 
 And when we look at tools like 3D printers or 3D doodlers, they essentially leave traces of their movement within the 3D space, and the traces stay at its original position without being dragged down by gravity, and create artifacts in dis way. So what would it feel like, to live in this process of creating artifacts that was not dragged down by gravity. 
 
@@ -29,7 +29,7 @@ This project tend to build and interactive system that, focus on the movement of
 
 For downsizing the user's perception of presence to the scale of a 3D printer head, we'll create a downsized city and create a thrid-person perspective.
 
-<iframe width="560" height="315" src="https://youtu.be/Zel9kF8QJeE?si=rjyIJCg0F-H69Vd9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://youtu.be/Zel9kF8QJeE?si=rjyIJCg0F-H69Vd9" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
 
 ## Proposed Design
 
@@ -39,21 +39,19 @@ The user will be able to control the figure's moving in the space, jump and walk
 
 ## Planned Implementation
 
-
-| ![Example 1](assets/AntiGravity1.png) | ![Example 2](assets/AntiGravity2.png) |
-| :---: | :---: |
-| Example 1 | Example 2 |
-
 The most important part of the peoject is to recreating a sense of presence for the user during the gravity direction switch process. And then allow the user to move within the corresponding plane under the new gravity direction on the surface of the city model, or to call the environment.
 
 Due to the limit of the 3D printer's arm's collision with the environment, it is difficult to integrate current 3D printer with a multiple layered environment without basically customizing the whole machine. There're certain ways to simplify the process.
 
 One is to limit the environment to one side and limit user's choice of gravity direction to only 4, namely down, up, toward and away from the environment. This can be accmoplished by the design shown below, which demonstrated gravity when toward and away from the environment without the arm fighting the environment.
+
 | ![Plan 1 example 1](assets/Plan1_1.png) | ![Plan 1 example 2](assets/Plan1_2.png) |
 | :---: | :---: |
 
 The other way is to add a rotating plane within the printing platform. So that the user can land on any side of the environment. This way the all 6 direction of gravity can be supported, and with the third perspective view of the camera, the user are expected to feel the figure switching the environment, instead of the environment rotating.
+
 ![Plan2](assets/Plan2.png)
+
 If the environment is overall cynlinder, it would provide even more avaliable directions of the gravity.
 
 The most crucial requirement for the installed city model or the environment is that it is generally convex, so that the figure won't need to get in the environment dragging the 3D printer arm behind, avoiding fully customing the machine or using a robotic arm.
@@ -94,3 +92,13 @@ Example Video Embedding
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/watch?v=gSDtNkKPiDg&t=343s" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> 
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/watch?v=GtryF3ltNwE" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> -->
+
+<!-- | ![Example 1](assets/AntiGravity1.png) | ![Example 2](assets/AntiGravity2.png) |
+| :---: | :---: |
+| Example 1 | Example 2 | -->
+
+<!-- <iframe width="560" height="315" src="https://youtu.be/gSDtNkKPiDg?si=qJzZDHxxbTCgLuS7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://youtu.be/GtryF3ltNwE?si=z9W5EbBU-gI3gbxy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://youtu.be/Zel9kF8QJeE?si=rjyIJCg0F-H69Vd9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
